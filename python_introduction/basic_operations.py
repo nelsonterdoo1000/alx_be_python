@@ -3,7 +3,7 @@
 #initalize the two numbers
 
 number1 = 10
-number2 =  5 
+number2 = 5 
 
 # Addition operations
 addition_result = number1 + number2
