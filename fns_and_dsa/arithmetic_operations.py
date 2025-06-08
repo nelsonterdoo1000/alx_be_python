@@ -1,28 +1,26 @@
 def perform_operation(num1, num2, operation):
     """
-    Perform arithmetic operation on two numbers.
+    Performs basic arithmetic operations on two numbers.
     
     Args:
-        num1: First number
-        num2: Second number
-        operation: String indicating the operation ('+', '-', '*', '/')
-        
+        num1 (float): First number
+        num2 (float): Second number
+        operation (str): Operation to perform ('add', 'subtract', 'multiply', 'divide')
+    
     Returns:
-        Result of the arithmetic operation
-        
-    Raises:
-        ValueError: If operation is not supported
-        ZeroDivisionError: If division by zero is attempted
+        float or str: Result of the arithmetic operation, or error message for division by zero
     """
-    if operation == '+':
+    operation = operation.lower()  # Handle case-insensitive input
+    
+    if operation == 'add':
         return num1 + num2
-    elif operation == '-':
+    elif operation == 'subtract':
         return num1 - num2
-    elif operation == '*':
+    elif operation == 'multiply':
         return num1 * num2
-    elif operation == '/':
+    elif operation == 'divide':
         if num2 == 0:
-            raise Exception("You cannot divide by zero")
+            return "Error: Division by zero is not allowed"
         return num1 / num2
     else:
-        return "You did not enter a valid mathematic operator!" 
+        return f"Error: Invalid operation '{operation}'. Valid operations are: add, subtract, multiply, divide"
