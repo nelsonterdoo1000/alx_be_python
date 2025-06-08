@@ -9,15 +9,15 @@ def main():
     shopping_list = []
     while True:
         display_menu()
-        choice = int(input("Enter your choice: "))
+        choice = input("Enter your choice: ")
 
         if choice == '1':
             # Prompt for and add an item
-            add_item = input("Enter the item to add \n")
+            add_item = input("Enter the item to add: ")
             shopping_list.append(add_item)
         elif choice == '2':
             # Prompt for and remove an item
-            remove_item= input("Enter the item you want to remove: \n")
+            remove_item = input("Enter the item you want to remove: ")
             shopping_list.remove(remove_item) 
         elif choice == '3':
             # Display the shopping list
